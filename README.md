@@ -1,5 +1,6 @@
 # [_Fullstack_Course_]() 🤯
-![GitHub language count](https://img.shields.io/github/languages/count/{xiyuanzhou}/{fullstack_selflearning}) ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/{xiyuanzhou}/{fullstack_selflearning})
+![GitHub language count](https://img.shields.io/github/languages/count/xiyuanzhou/fullstack_selflearning) ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/xiyuanzhou/fullstack_selflearning) ![GitHub repo size](https://img.shields.io/github/repo-size/xiyuanzhou/fullstack_selflearning) ![GitHub last commit](https://img.shields.io/github/last-commit/xiyuanzhou/fullstack_selflearning)
+
 
 ***
 
