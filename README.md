@@ -1,4 +1,5 @@
 # [_Fullstack_Course_]() 🤯
+![GitHub language count](https://img.shields.io/github/languages/count/{xiyuanzhou}/{main})
 ***
 
 ```diff
