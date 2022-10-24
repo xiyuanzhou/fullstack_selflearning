@@ -103,4 +103,19 @@ tuple1 = ('hello', 2.343,1000, [1,2,3,4])
 
 > `done` 🐵
 
-## *Django (Views, Routing, URLS)* 
+## ~~*Django (Views, Routing, URLS)*~~ 
+$ python manage.py startapp (your file name)
+
+```python
+'''
+important information announce 
+'''
+import os
+TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
+
+```
+- Basic URLS ✅
+- Basic views (linking) ✅
+- Templates created ✅
+
+> `done` 🐵
