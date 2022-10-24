@@ -77,4 +77,19 @@ tuple1 = ('hello', 2.343,1000, [1,2,3,4])
 > `Move on` -> `done` 🐵
 
 ## *Django Framework* ##
-- 
+
+```diff
+- Please check out the readme.txt for (Django environment) Installation
+```
+> ~~Required Python3~~
+
+> ~~Required ternimal access(will be best)~~
+
+> ~~Required install Django4~~
+
+> ~~Required install virtualenv~~
+
+> *Check Python and Django Version below*
+```diff
++ python -m django --version
+```
