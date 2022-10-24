@@ -32,3 +32,31 @@
 
 ## *Bootstrap*
 - 
+
+
+## ~~*Python3*~~ *(Skip)*
+***(Python Learned)***
+
+$ python3 --version
+
+$ sudo apt install python3.9
+```python
+'''
+comment a lot
+'''
+
+#single comment
+print('Hello World')
+
+def Foo(self, bar):
+    self.bar = bar
+
+list1 = [1,23,4]
+dict1 = {1:'2',2:'3'}
+tuple1 = ('hello', 2.343,1000, [1,2,3,4])
+```
+
+> `Move on` -> `done` 🐵
+
+## *Django Framework* ##
+- 
