@@ -1,0 +1,13 @@
+#up{
+    text-align: center;
+    border: 10px solid blue;
+    margin-bottom: 100px;
+    margin-left: 100px;
+}
+
+#down{
+    text-align: center;
+    border: 10px solid red;
+    padding: 50px;
+
+}
