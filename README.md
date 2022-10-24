@@ -76,7 +76,7 @@ tuple1 = ('hello', 2.343,1000, [1,2,3,4])
 
 > `Move on` -> `done` 🐵
 
-## *Django Framework* ##
+## ~~*Django Framework*~~ ##
 
 ```diff
 - Please check out the readme.txt for (Django environment) Installation
@@ -93,3 +93,14 @@ tuple1 = ('hello', 2.343,1000, [1,2,3,4])
 ```diff
 + python -m django --version
 ```
+
+```html
+<br>
+```
+
+- Django project created ✅
+- Django first application created ✅
+
+> `done` 🐵
+
+## *Django (Views, Routing, URLS)* 
