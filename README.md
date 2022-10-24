@@ -25,5 +25,5 @@
 ## *CSS*
 - Basic Css ✅
 - Common Style ✅
--
+- Selector ✅
 
