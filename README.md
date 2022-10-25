@@ -119,3 +119,18 @@ TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 - Templates created ✅
 
 > `done` 🐵
+
+## *Django-Templates*
+> important notes
+
+$ python manange.py migrate
+
+$ python manange.py makemigrations my_app
+
+```python
+"my_app.apps.MyAppConfig"
+```
+
+- Templates Directories ✅
+-
+
