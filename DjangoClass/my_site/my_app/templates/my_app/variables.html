@@ -15,5 +15,17 @@
     <p>{{ some_list.0 }} </p>
     <p>{{ some_dict.insidekey }}</p>
     <p>{# This is comment #}</p>
+
+    <div>
+        {% for item in some_list%}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </div>
+
+    <div>
+        {% for key, value in some_dict.items %}
+            <li>{{value | capfirst}}</li>
+        {% endfor %}
+    </div>
 </body>
 </html>
