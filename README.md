@@ -152,3 +152,16 @@ $ python manange.py makemigrations my_app
 
 [_Built-in template tags and filters_](https://docs.djangoproject.com/en/4.1/ref/templates/builtins/) (click to see)
 
+- Django For Loop ✅
+> notes
+```django
+{% for item in some_list %}
+    <p>{{ item }}</p>
+{% endfor %}
+
+{% for key, value in some_dict.items %}
+    <li>{{ key }} </li>
+    <li>{{ value | capfirst }} </li>
+{% endfor %}
+```
+- Django If, Elif, Else
