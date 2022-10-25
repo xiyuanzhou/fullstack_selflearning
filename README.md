@@ -148,5 +148,7 @@ $ python manange.py makemigrations my_app
 <p>{{ some_list.0 }}</p>
 <p>{{ some_dict.insidekey }}</p>
 ```
-- 
+- Django Filter ✅
+
+[_Built-in template tags and filters_](https://docs.djangoproject.com/en/4.1/ref/templates/builtins/) (click to see)
 
