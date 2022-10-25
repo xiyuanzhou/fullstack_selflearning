@@ -2,10 +2,10 @@ from my_app import views
 from django.urls import path
 
 urlpatterns =[
-    path('', views.example_view)
+    path('example/', views.example_view),
 
-
-
+    path('var/', views.variables),
+    
 ]
 
 
