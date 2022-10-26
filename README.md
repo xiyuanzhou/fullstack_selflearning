@@ -165,3 +165,9 @@ $ python manange.py makemigrations my_app
 {% endfor %}
 ```
 - Django If, Elif, Else
+> notes
+```django
+{% if count == 0 %}
+    <p>yes</p>
+{% endif %}
+```
