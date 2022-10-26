@@ -12,12 +12,11 @@ def variables(request):
     my_var ={
         'first_name' : 'lucas',
         'last_name' : 'juesi',
-        'some_list' : [1,2,3,4,4],
+        'some_list' : [1,2,3,4,4,2,3,4,4,3,2,3,4,4,4],
         'some_dict' : {
             'insidekey': 'inside_value',
-            'anotherkey': 'another_value',
-
-            }
+            'anotherkey': 'another_value',},
+        'count': 0,
     }
 
     return render(request, 'my_app/variables.html', context=my_var)

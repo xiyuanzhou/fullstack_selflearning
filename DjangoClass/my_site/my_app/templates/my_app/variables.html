@@ -27,5 +27,15 @@
             <li>{{value | capfirst}}</li>
         {% endfor %}
     </div>
+
+    <br>
+    <ul>
+        {% for i in some_list %}
+            {% if i == 4 %}
+                <p>{{count | add:"1" }} </p>
+            {% endif%}
+        {% endfor %}
+    </ul>
+    
 </body>
 </html>
