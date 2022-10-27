@@ -217,4 +217,27 @@ $ python manange.py makemigrations my_app
     $ python manage.py migrate
     $ python manage.py makemirgrations office (apps)
     $ python manage.py migrate 
-- Creating and Insert
+- Creating and Insert ✅
+> runing on shell/terminal python
+
+    $ python manage.py shell
+```python
+    from office,models import Patient
+
+    #create first object
+    p1 = Patient(first_name='carl',last_name='kit', age = 30)
+    #shortcut create
+    Patient.objects.create(first_name='lucas',last_name='kit', age = 45)
+    mylist=[Patient(first_name='jack',last_name='zhu', age=22), Patient(first_name='lucas',last_name='zhou',age=12)]
+    '''
+    Access Objects
+    p1.age
+    p1.last_name
+    '''
+    #save object
+    p1.save()
+    #see all objects
+    Patient.objects.all() #Patient.objects.all()[0]
+    Patient.objects.bulk_create(mylist)
+```
+- Filter and Get
