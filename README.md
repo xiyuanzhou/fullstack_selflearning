@@ -120,7 +120,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 
 > `done` 🐵
 
-## *Django-Templates*
+## ~~*Django-Templates*~~
 > important notes
 
 $ python manange.py migrate
@@ -202,4 +202,12 @@ $ python manange.py makemigrations my_app
 ```
 - ~~Custom Error 404 html~~ ✅
 > Pass
+- Static Files ✅
+> notes
+```html
+    <img src ="{% static 'my_app/IMG_6019.jpeg' %}" alt='no image found'> 
+```
+> `done` 🐵
+
+## *Django-Model, Database and Queries*
 - 
