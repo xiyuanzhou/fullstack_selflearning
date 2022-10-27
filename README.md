@@ -200,4 +200,6 @@ $ python manange.py makemigrations my_app
     <a href="{% url 'my_app:variables' %}"> Click me</a>
 {% endblock  %}
 ```
+- ~~Custom Error 404 html~~ ✅
+> Pass
 - 
