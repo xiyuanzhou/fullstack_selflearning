@@ -210,4 +210,11 @@ $ python manange.py makemigrations my_app
 > `done` 🐵
 
 ## *Django-Model, Database and Queries*
-- 
+- Database Migrations ✅
+> Add the app into setting INSTALLED_APP
+> https://docs.djangoproject.com/en/4.1/ref/databases/
+
+    $ python manage.py migrate
+    $ python manage.py makemirgrations office (apps)
+    $ python manage.py migrate 
+- Creating and Insert
