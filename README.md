@@ -188,5 +188,16 @@ $ python manange.py makemigrations my_app
     <p>Example</p>
     <h1><a href="{% url 'my_app:example'  %}">Click me</a></h1>
 ```
-
-
+- Templates Inheritance ✅
+> Note need add a templates path into setting
+```python
+    TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
+```
+```html
+{% extends 'base.html' %}
+{% block  content %}
+    <p>Welcome again</p>
+    <a href="{% url 'my_app:variables' %}"> Click me</a>
+{% endblock  %}
+```
+- 
