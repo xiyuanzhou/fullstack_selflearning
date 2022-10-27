@@ -1,7 +1,7 @@
 # [_Fullstack_Course_]() 🤯
 ![GitHub language count](https://img.shields.io/github/languages/count/xiyuanzhou/fullstack_selflearning) ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/xiyuanzhou/fullstack_selflearning) ![GitHub repo size](https://img.shields.io/github/repo-size/xiyuanzhou/fullstack_selflearning) ![GitHub last commit](https://img.shields.io/github/last-commit/xiyuanzhou/fullstack_selflearning)
 
-> `Author: Lucas Z`
+> `Author: Xiyuan(Lucas) Z`
 
 ***
 
@@ -164,10 +164,29 @@ $ python manange.py makemigrations my_app
     <li>{{ value | capfirst }} </li>
 {% endfor %}
 ```
-- Django If, Elif, Else
+- Django If, Elif, Else ✅
 > notes
 ```django
 {% if count == 0 %}
     <p>yes</p>
 {% endif %}
 ```
+- Tags and Url name in templates ✅
+> Register the app namespace in urls.py
+```python
+    #my_app is your app folder name
+    app_name = 'my_app'
+
+    #example
+    urlpatterns =[
+    path('example/', views.example_view, name='example'),
+    path('var/', views.variables, name='variables'),
+    ]
+```
+> How to use
+```html
+    <p>Example</p>
+    <h1><a href="{% url 'my_app:example'  %}">Click me</a></h1>
+```
+
+
