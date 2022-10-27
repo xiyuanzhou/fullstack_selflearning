@@ -1,11 +1,14 @@
 from my_app import views
 from django.urls import path
 
-urlpatterns =[
-    path('example/', views.example_view),
+app_name = 'my_app'
 
-    path('var/', views.variables),
-    
+
+urlpatterns =[
+    path('example/', views.example_view, name='example'),
+
+    path('var/', views.variables, name='variables'),
+
 ]
 
 
