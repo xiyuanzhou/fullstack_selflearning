@@ -209,7 +209,7 @@ $ python manange.py makemigrations my_app
 ```
 > `done` 🐵
 
-## *Django-Model, Database and Queries*
+## ~~*Django-Model, Database and Queries*~~
 - Database Migrations ✅
 > Add the app into setting INSTALLED_APP
 > https://docs.djangoproject.com/en/4.1/ref/databases/
@@ -299,7 +299,7 @@ It can write in different way
     first.heartrate = 90
     first.save()
 ```
-- Deleting Entries
+- Deleting Entries ✅
 > Notes -> just call delete()
 ```python
 #example
@@ -307,3 +307,24 @@ It can write in different way
     first = Patient.objects.get(pk=1) #primary key
     first.delete()
 ```
+- Connecting Templates and Database Models ✅
+> Notes
+```python
+    from office import models
+
+    all_patient = models.Patient.objects.all()
+    context = {'patient': all_patient}
+```
+> HTML
+```html
+    {% for i in patient %}
+        <tr>
+            <td>{{ i.first_name }}</td>
+            <td>{{ i.last_name }}</td>
+            <td>{{ i.age }} </td>
+            <td>{{ i.heartrate }}</td>
+        </tr>
+    {% endfor %}
+```
+> `done` 🐵 (next session)
+## *Django Admin*

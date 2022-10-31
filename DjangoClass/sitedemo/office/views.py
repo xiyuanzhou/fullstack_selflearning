@@ -1,8 +1,9 @@
 from django.shortcuts import render
-
+from office import models
 # Create your views here.
 
 def index(request):
+
     mydict ={
         'test1': 'test1',
         'test2': 'test2',
@@ -11,4 +12,12 @@ def index(request):
         
     }
     return render(request, 'office/index.html', context=mydict)
+
+def allmodels(request):
+
+    all_patient = models.Patient.objects.all()
+    
+    context = {'patient': all_patient}
+
+    return render(request, 'office/datalist.html', context=context)
 
