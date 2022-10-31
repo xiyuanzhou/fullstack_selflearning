@@ -255,3 +255,15 @@ $ python manage.py shell
 
     Patient.objects.filter(Q(last_name='kit') & Q(age=22)).all()
 ```
+- Field Lookups ✅
+> Notes -> [_Field lookups_](https://docs.djangoproject.com/en/4.1/ref/models/querysets/#id4)
+```python
+    Patient.objects.filter(last_name__startswith='k').all()
+    Patient.objects.filter(age__in=[10,20,40,22]).all()
+    #gte stands for (greater than equal to) 
+    Patient.objects.filter(age__gte= 22).all()
+
+    Patient.objects.order_by('age').all()
+    Patient.objects.order_by('last_name').all()
+```
+- Updating Models
