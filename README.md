@@ -267,3 +267,23 @@ $ python manage.py shell
     Patient.objects.order_by('last_name').all()
 ```
 - Updating Models
+> Notes
+```python
+'''
+If want to updated new data field in existing models
+'''
+    # Set a default value and it can updated data later
+    heartrate = models.IntegerField(default=70,validators=[MinValueValidator(60), MaxValueValidator(150)])
+
+    #and validators field
+    from django.core.validators import MaxValueValidator, MinValueValidator
+    
+    age = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(150)])
+```
+>After updating the models field (start migrations)
+
+$ python manage.py makemigrations office 
+
+$ python manage.py migrate
+
+- Updating Entries
