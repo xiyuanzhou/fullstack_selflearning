@@ -266,7 +266,7 @@ $ python manage.py shell
     Patient.objects.order_by('age').all()
     Patient.objects.order_by('last_name').all()
 ```
-- Updating Models
+- Updating Models ✅
 > Notes
 ```python
 '''
@@ -286,4 +286,16 @@ $ python manage.py makemigrations office
 
 $ python manage.py migrate
 
-- Updating Entries
+- Updating Entries ✅
+> Notes
+```python
+'''
+It can write in different way
+'''
+#example
+    #assign the data first
+    first = Patient.objects.all()[0]
+    first = Patient.objects.get(pk=1) #primary key
+    first.heartrate = 90
+    first.save()
+```
