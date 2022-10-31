@@ -299,3 +299,11 @@ It can write in different way
     first.heartrate = 90
     first.save()
 ```
+- Deleting Entries
+> Notes -> just call delete()
+```python
+#example
+    #assign the data first
+    first = Patient.objects.get(pk=1) #primary key
+    first.delete()
+```
