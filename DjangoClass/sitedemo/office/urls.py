@@ -7,6 +7,6 @@ app_name = 'office'
 
 urlpatterns=[
     path('home/', views.index, name='firstindex'),
+    path('data/', views.allmodels,name='allmodels'),
     
-
 ]
