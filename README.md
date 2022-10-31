@@ -240,4 +240,18 @@ $ python manange.py makemigrations my_app
     Patient.objects.all() #Patient.objects.all()[0]
     Patient.objects.bulk_create(mylist)
 ```
-- Filter and Get
+- Filter and Get ✅
+> Notes (options)
+
+$ python manage.py shell
+```python
+    #import the models first
+    from office.models import Patient
+    #import Q (for look up)
+    from django.db.models import Q
+
+    #without Q oprand
+    Patient.objects.filter(last_name='kit').filter(age=22).all()
+
+    Patient.objects.filter(Q(last_name='kit') & Q(age=22)).all()
+```
