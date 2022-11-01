@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
 from django.urls import reverse
 from cars import models
+
+from django.db.models import Q
 # Create your views here.
 
 
@@ -25,5 +27,14 @@ def add(request):
 
 
 def delete(request):
+    if request.POST:
+        brand = request.POST['brand']
+        year = int(request.POST['year'])
 
-    return render(request, "cars/delete.html")
+        if models.cars.objects.filter(Q(brand=brand) & Q(year=year)).all():
+            temp1 = models.cars.objects.filter(Q(brand=brand) & Q(year=year)).all()[0]
+            #print(temp1)
+            temp1.delete()
+            return redirect(reverse('cars:list'))
+    else:
+        return render(request, "cars/delete.html")

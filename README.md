@@ -373,5 +373,19 @@ def add(request):
         return redirect(reverse('cars:list'))
     else:
         return render(request, "cars/add.html")
+
+def delete(request):
+    if request.POST:
+        brand = request.POST['brand']
+        year = int(request.POST['year'])
+
+        if models.cars.objects.filter(Q(brand=brand) & Q(year=year)).all():
+            temp1 = models.cars.objects.filter(Q(brand=brand) & Q(year=year)).all()[0]
+            #print(temp1)
+            temp1.delete()
+            return redirect(reverse('cars:list'))
+    else:
+        return render(request, "cars/delete.html")
 ```
+
 - 

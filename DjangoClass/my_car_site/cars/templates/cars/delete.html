@@ -1,5 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>hello2</h1>
+    <div class="container">
+        <h1>Delete car object</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="Brand">Name for brand</label>
+                <input class="form-control" type='text' id='brand' name='brand'>
+
+            </div>
+            <div>
+                <label for="Year">year:</label>
+                <input class="form-control" type='text' id='year' name='year'>
+
+            </div>
+            <input class="btn btn-primary" type="submit">
+        </form>
+    </div>
+
 {% endblock %}
