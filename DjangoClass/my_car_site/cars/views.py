@@ -1,14 +1,28 @@
-from django.shortcuts import render
-
+from django.shortcuts import render,redirect
+from django.urls import reverse
+from cars import models
 # Create your views here.
 
-def list(request):
 
-    return render(request, "cars/list.html")
+def list(request):
+    all_car = models.cars.objects.all()
+
+    context = {'all_car': all_car}
+
+    return render(request, "cars/list.html",context=context)
 
 def add(request):
-    
-    return render(request, "cars/add.html")
+    #print(request.POST)
+    if request.POST:
+        brand = request.POST['brand']
+        year = int(request.POST['year'])
+
+        models.cars.objects.create(brand=brand,year=year)
+        return redirect(reverse('cars:list'))
+    else:
+        return render(request, "cars/add.html")
+
+
 
 def delete(request):
 
