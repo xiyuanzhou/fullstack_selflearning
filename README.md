@@ -10,6 +10,7 @@
 + Python3 
 + Bootstrap v5
 
+- SQLite
 - HTML 5
 - CSS
 ```
@@ -338,4 +339,39 @@ It can write in different way
         <li><a class="dropdown-item" href="{% url 'cars:add' %}">Add</a></li>
         <li><a class="dropdown-item" href="{% url 'cars:delete' %}">Delete</a></li>
 ```
-- Model and Website P2
+- Model and Website P2 ✅
+> Important Notes
+```python
+    '''
+    when access the website from inside the app tempates
+    please using ex. 
+    {% url 'cars:list' %}
+    {% url 'cars:add' %}
+    {% url 'cars:delete' %}
+    '''
+    app_name = "cars"
+    urlpatterns = [
+        path('list/', views.list, name='list'),
+        path('add/', views.add, name='add'),
+        path('delete/', views.delete, name='delete'),]
+    #cars:list -> 'list' is from the name NOT NOT class object name
+```
+> Taking information form HTML
+```html
+    <form action="" method="POST">
+        {% csrf_token %}
+    </form>
+```
+```python
+def add(request):
+    #print(request.POST)
+    if request.POST:
+        brand = request.POST['brand']
+        year = int(request.POST['year'])
+
+        models.cars.objects.create(brand=brand,year=year)
+        return redirect(reverse('cars:list'))
+    else:
+        return render(request, "cars/add.html")
+```
+- 
