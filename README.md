@@ -387,5 +387,15 @@ def delete(request):
     else:
         return render(request, "cars/delete.html")
 ```
+- Django Administration and Models ✅
+> notes (create super user) check to see if interest custom own admin site.
+[_custom_admin_site_](https://docs.djangoproject.com/en/4.1/ref/contrib/admin/)
 
-- 
+$ python manange.py createsuperuser
+```python
+    '''
+    Go to admin.py (edit)
+    register the model int admin site
+    '''
+    admin.site.register(cars)
+```
