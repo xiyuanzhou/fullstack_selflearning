@@ -328,7 +328,7 @@ It can write in different way
     {% endfor %}
 ```
 > `done` 🐵 (next session)
-## *Django Admin*
+## ~~*Django Admin*~~
 - Model and Website P1 ✅
 > Notes (using boostrap)
 ```html
@@ -399,3 +399,23 @@ $ python manange.py createsuperuser
     '''
     admin.site.register(cars)
 ```
+## *Django Forms* ##
+- Django Form Class basic
+> notes (Optional)
+```python
+    if request.POST:
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+            return redirect(reverse('computers:thank_you'))
+    else:
+        form = ReviewForm()
+    return render(request, 'computers/computerinfo.html',context={'form': form})
+
+    class ReviewForm(forms.Form):
+        first_name = forms.CharField(label='First name', max_length=100)
+        last_name = forms.CharField(label='Last name', max_length=100)
+        email = forms.EmailField(label='email')
+        review = forms.CharField(label='write your review here')
+```
+
