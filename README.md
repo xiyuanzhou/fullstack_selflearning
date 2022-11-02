@@ -399,10 +399,13 @@ $ python manange.py createsuperuser
     '''
     admin.site.register(cars)
 ```
+> `done` 🐵
 ## *Django Forms* ##
-- Django Form Class basic
-> notes (Optional)
+- Django Form Class basic ✅
+> notes (Optional) (Simple forms) only need to know the concept
 ```python
+from django import forms
+
     if request.POST:
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -418,4 +421,8 @@ $ python manange.py createsuperuser
         email = forms.EmailField(label='email')
         review = forms.CharField(label='write your review here')
 ```
+- Widgets and Styling
 
+
+- Model Forms & Customization
+> model form is what we need (similar to simple forms)
