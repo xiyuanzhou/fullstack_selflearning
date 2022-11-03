@@ -422,7 +422,15 @@ from django import forms
         review = forms.CharField(label='write your review here')
 ```
 - Widgets and Styling
-
-
+> notes(example) if wants knowing more widget check out [_Django WIDGET_](https://docs.djangoproject.com/en/4.1/ref/forms/widgets/)
+```python
+    #class = myform,,is to match css 
+    review = forms.CharField(label='write your review here',widget=forms.Textarea(attrs={'class':'myform'}))
+```
+```css
+    .myform{ 
+    border: 5px solid red;
+}
+```
 - Model Forms & Customization
-> model form is what we need (similar to simple forms)
+> model form is what we need (similar to simple previous forms)
