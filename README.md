@@ -434,3 +434,26 @@ from django import forms
 ```
 - Model Forms & Customization
 > model form is what we need (similar to simple previous forms)
+```python
+'''
+In the model files just reate a normal models
+'''
+    #in forms.py
+    from .models import Review
+    from django.forms import ModelForm
+    class ReviewForm(ModelForm):
+
+    class Meta:
+        model = Review
+
+        fields = ["first_name","last_name","stars"]
+        #or
+        fields = "__all__" # passing all the fields
+'''
+also dont forget register admin if want to checkout admin site
+'''
+    from .models import Review
+    # Register your models here.
+    admin.site.register(Review)
+```
+> Don't forget each NEW models need migrations(Checkout my previous notes)

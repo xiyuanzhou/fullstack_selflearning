@@ -11,6 +11,7 @@ def computer_info(request):
 
         if form.is_valid():
 
+            form.save()
             print(form.cleaned_data)
             return redirect(reverse('computers:thank_you'))
     else:
