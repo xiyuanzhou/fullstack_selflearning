@@ -400,7 +400,7 @@ $ python manange.py createsuperuser
     admin.site.register(cars)
 ```
 > `done` 🐵
-## *Django Forms* ##
+## ~~*Django Forms*~~ ##
 - Django Form Class basic ✅
 > notes (Optional) (Simple forms) only need to know the concept
 ```python
@@ -457,3 +457,22 @@ also dont forget register admin if want to checkout admin site
     admin.site.register(Review)
 ```
 > Don't forget each NEW models need migrations(Checkout my previous notes)
+
+## *Django Class Base View*
+> Notes jump this lecture first
+
+> come back in the future
+
+## *User Authentication and Sessions*
+- Project Sketeton ✅
+> First need to fix up the url views from MAIN urls.py
+```python
+    from django.views.generic import RedirectView
+    #if www.example.com/() <- if empty just direct to 'catalog/'  
+    path('',RedirectView.as_view(url="catalog/")),
+```
+> When access the website will auto jump to 'catalog/' if user access the first time, or user type just www.example.com/.
+
+- Model Setup
+
+
