@@ -473,6 +473,15 @@ also dont forget register admin if want to checkout admin site
 ```
 > When access the website will auto jump to 'catalog/' if user access the first time, or user type just www.example.com/.
 
-- Model Setup
+- Model Setup ✅
+
+> [_Models Fields Example_](https://docs.djangoproject.com/en/4.1/topics/db/models/)
+
+> Setting up the actual Book libray and MODELS just like usual
+
+> Please check out the python files inside DjangoClass -> libray -> catalog -> models.py
+
+- Admin Setup
+
 
 
